@@ -23,7 +23,7 @@ class Instagram extends StatelessWidget {
         "/message": (context) => const Message(),
         "/followers": (context) => const Followers(),
         "/profile": (context) => const Profile(),
-      }, 
+      },
     );
   }
 }
