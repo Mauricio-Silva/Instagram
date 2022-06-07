@@ -1,7 +1,24 @@
 import 'package:flutter/material.dart';
 
 class InstagramUser extends StatelessWidget {
-  const InstagramUser({Key? key}) : super(key: key);
+  final AssetImage userProfileImage;
+  final String userProfileName;
+  final String userProfileDesc;
+  final List<Image> userProfilePhotos;
+  final List<TextSpan> userPhraseLine1;
+  final List<TextSpan> userPhraseLine2;
+  final String userHasTagLine;
+
+  const InstagramUser({
+    Key? key,
+    required this.userProfileImage,
+    required this.userProfileName,
+    required this.userProfileDesc,
+    required this.userProfilePhotos,
+    required this.userPhraseLine1,
+    required this.userPhraseLine2,
+    required this.userHasTagLine,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,19 +31,19 @@ class InstagramUser extends StatelessWidget {
           thickness: 8,
           color: Color.fromARGB(255, 215, 224, 228),
         ),
-        const ListTile(
+        ListTile(
           leading: CircleAvatar(
-            backgroundImage: AssetImage("assets/images/perfil2.jpeg"),
+            backgroundImage: userProfileImage,
           ),
           title: Text(
-            "Gandalf",
-            style: TextStyle(
+            userProfileName,
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
           ),
-          subtitle: Text("Istari, Middle-earth"),
-          trailing: Icon(
+          subtitle: Text(userProfileDesc),
+          trailing: const Icon(
             Icons.more_horiz,
             size: 40,
           ),
@@ -38,30 +55,23 @@ class InstagramUser extends StatelessWidget {
               height: 350,
               child: PageView(
                 controller: controlador,
-                children: [
-                  Image.asset(
-                    "assets/images/perfil2.jpeg",
-                    fit: BoxFit.cover,
-                  ),
-                  Image.asset(
-                    "assets/images/perfil2.jpeg",
-                    fit: BoxFit.cover,
-                  ),
-                ],
+                children: userProfilePhotos,
               ),
             ),
           ],
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(15, 20, 15, 5),
+          padding: const EdgeInsets.fromLTRB(5, 20, 5, 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
-                  const FavoriteIcon(color: Colors.blue),
-                  const FavoriteIcon(color: Colors.red),
-                  const FavoriteIcon(color: Colors.green),
+                  const ChangeSelectedIconColor(
+                    iconColor: Colors.red,
+                    iconName1: Icons.favorite_border,
+                    iconName2: Icons.favorite,
+                  ),
                   IconButton(
                     icon: const Icon(
                       Icons.mode_comment_outlined,
@@ -78,12 +88,44 @@ class InstagramUser extends StatelessWidget {
                   ),
                 ],
               ),
-              IconButton(
-                icon: const Icon(
-                  Icons.bookmark_border_sharp,
+              const ChangeSelectedIconColor(
+                iconColor: Colors.black,
+                iconName1: Icons.bookmark_border_sharp,
+                iconName2: Icons.bookmark,
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(5, 20, 5, 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              RichText(
+                textAlign: TextAlign.left,
+                text: TextSpan(
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                  children: userPhraseLine1,
                 ),
-                iconSize: 35,
-                onPressed: () {},
+              ),
+              RichText(
+                textAlign: TextAlign.start,
+                text: TextSpan(
+                  style: const TextStyle(
+                    fontSize: 16,
+                  ),
+                  children: userPhraseLine2,
+                ),
+              ),
+              Text(
+                userHasTagLine,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 24, 100, 161),
+                  fontSize: 16,
+                ),
               ),
             ],
           ),
@@ -93,38 +135,43 @@ class InstagramUser extends StatelessWidget {
   }
 }
 
-class FavoriteIcon extends StatefulWidget {
-  final Color color;
+class ChangeSelectedIconColor extends StatefulWidget {
+  final Color iconColor;
+  final IconData iconName1;
+  final IconData iconName2;
 
-  const FavoriteIcon({
+  const ChangeSelectedIconColor({
     Key? key,
-    required this.color, // parametro do construtor
+    required this.iconColor,
+    required this.iconName1,
+    required this.iconName2,
   }) : super(key: key);
 
   @override
-  State<FavoriteIcon> createState() => _FavoriteIconState();
+  State<ChangeSelectedIconColor> createState() =>
+      _ChangeSelectedIconColorState();
 }
 
-class _FavoriteIconState extends State<FavoriteIcon> {
-  bool selecionado = false;
+class _ChangeSelectedIconColorState extends State<ChangeSelectedIconColor> {
+  bool selected = false;
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: selecionado
-          ? Icon(
-              Icons.favorite,
-              color: widget.color,
-            )
-          : const Icon(
-              Icons.favorite_border,
-            ),
       iconSize: 35,
       onPressed: () {
         setState(() {
-          selecionado = !selecionado;
+          selected = !selected;
         });
       },
+      icon: selected
+          ? Icon(
+              widget.iconName2,
+              color: widget.iconColor,
+            )
+          : Icon(
+              widget.iconName1,
+            ),
     );
   }
 }

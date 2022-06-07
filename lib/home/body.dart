@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/home/body/stories.dart';
-import 'package:instagram/home/body/user.dart';
+import 'package:instagram/home/body/users_list.dart';
 
 class InstagramBody extends StatelessWidget {
   const InstagramBody({Key? key}) : super(key: key);
@@ -8,9 +8,10 @@ class InstagramBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
-        InstagramStories(),
-        InstagramUser()
+      children: [
+        const InstagramStories(),
+        user1,
+        user2,
       ],
     );
   }
