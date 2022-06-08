@@ -12,6 +12,7 @@ class InstagramBody extends StatelessWidget {
         const InstagramStories(),
         user1,
         user2,
+        user3,
       ],
     );
   }

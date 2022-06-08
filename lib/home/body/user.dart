@@ -25,6 +25,7 @@ class InstagramUser extends StatelessWidget {
     PageController controlador = PageController();
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Divider(
           height: 10,
@@ -97,9 +98,9 @@ class InstagramUser extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(5, 20, 5, 15),
+          padding: const EdgeInsets.fromLTRB(15, 5, 15, 20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RichText(
                 textAlign: TextAlign.left,
