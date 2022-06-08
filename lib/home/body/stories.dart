@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/home/body/story.dart';
 
 class InstagramStories extends StatelessWidget {
   const InstagramStories({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const double espaco = 10;
+    const double space = 25;
 
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(15, 20, 15, 5),
+          padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -37,60 +38,60 @@ class InstagramStories extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 100,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            shrinkWrap: true,
-            children: [
-              //!!!
-              Container(
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  gradient: LinearGradient(
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight,
-                      colors: [Colors.pink, Colors.purple]),
+          height: 145,
+          width: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              children: const [
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil2.jpeg",
+                  userStoryName: "Gandalf",
                 ),
-                padding: const EdgeInsets.all(6.0),
-                child: Container(
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.white,
-                    ),
-                    padding: const EdgeInsets.all(3.0),
-                    child: const CircleAvatar(
-                      radius: 64,
-                      backgroundImage: NetworkImage(
-                          "https://images.unsplash.com/photo-1654612310544-9f46f2fa624b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"),
-                    )),
-              ),
-
-              Container(
-                padding: EdgeInsets.all(15),
-                margin: EdgeInsets.all(15),
-                child: const CircleAvatar(
-                  radius: 25,
-                  backgroundImage: AssetImage("assets/images/perfil2.jpeg"),
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil1.png",
+                  userStoryName: "Galadriel",
                 ),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.red,
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil3.jpg",
+                  userStoryName: "Saruman",
                 ),
-              ),
-              const CircleAvatar(),
-              const SizedBox(width: espaco),
-              const CircleAvatar(),
-              const SizedBox(width: espaco),
-              const CircleAvatar(),
-              const SizedBox(width: espaco),
-              const CircleAvatar(),
-              const SizedBox(width: espaco),
-              const CircleAvatar(),
-              const SizedBox(width: espaco),
-              const CircleAvatar(),
-              const SizedBox(width: espaco),
-              const CircleAvatar(),
-            ],
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil4.jpg",
+                  userStoryName: "Elrond",
+                ),
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil5.jpg",
+                  userStoryName: "Aragorn",
+                ),
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil6.jpeg",
+                  userStoryName: "Legolas",
+                ),
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil7.jpg",
+                  userStoryName: "Gimli",
+                ),
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil8.jpg",
+                  userStoryName: "Théoden",
+                ),
+                SizedBox(width: space),
+                InstagramStory(
+                  userStoryImage: "assets/images/perfil9.jpg",
+                  userStoryName: "Bilbo",
+                ),
+              ],
+            ),
           ),
         ),
       ],
