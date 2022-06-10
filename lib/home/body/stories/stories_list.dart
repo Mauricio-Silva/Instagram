@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/home/body/stories/story.dart';
 import 'package:instagram/home/body/stories/story_live.dart';
-
+import 'package:instagram/home/body/stories/your_story.dart';
 
 List<Widget> stories = [
+  yourStory,
   storyLive,
   const InstagramStory(
     userStoryImage: "assets/images/perfil1.png",

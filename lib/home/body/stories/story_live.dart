@@ -13,7 +13,7 @@ Stack storyLive = Stack(
       child: Container(
         width: 32,
         height: 18,
-        padding: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(3),
         child: const Text(
           "LIVE",
           textAlign: TextAlign.center,
@@ -22,14 +22,18 @@ Stack storyLive = Stack(
             color: Colors.white,
           ),
         ),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-          gradient: LinearGradient(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(5)),
+          border: Border.all(
+            color: Colors.white,
+            width: 1.5,
+          ),
+          gradient: const LinearGradient(
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
             colors: [
-              Colors.orange,
               Colors.red,
+              Colors.pink,
               Colors.purple,
             ],
           ),
