@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/home/body/user.dart';
+import 'package:instagram/home/body/users/user.dart';
 
 InstagramUser user1 = InstagramUser(
   userProfileImage: const AssetImage("assets/images/perfil2.jpeg"),

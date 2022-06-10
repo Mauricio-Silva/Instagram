@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/home/body/stories.dart';
-import 'package:instagram/home/body/users_list.dart';
+import 'package:instagram/home/body/stories/stories.dart';
+import 'package:instagram/home/body/users/users_list.dart';
 
 class InstagramBody extends StatelessWidget {
   const InstagramBody({Key? key}) : super(key: key);
