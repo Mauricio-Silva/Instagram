@@ -20,6 +20,7 @@ Stack yourStory = Stack(
             "Your Story",
             style: TextStyle(
               fontSize: 14,
+              color: Colors.grey,
               fontWeight: FontWeight.bold,
             ),
           ),

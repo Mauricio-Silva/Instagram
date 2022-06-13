@@ -7,6 +7,8 @@ class InstagramAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
+      centerTitle: true,
+      shadowColor: Colors.white,
       leading: Builder(
         builder: (BuildContext context) {
           return IconButton(
@@ -14,21 +16,20 @@ class InstagramAppBar extends StatelessWidget implements PreferredSizeWidget {
               Icons.camera_alt_outlined,
               color: Colors.black,
             ),
-            iconSize: 30,
+            iconSize: 35,
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
           );
         },
       ),
-      centerTitle: true,
       title: const Text(
         "Instagram",
         textAlign: TextAlign.center,
         style: TextStyle(
+          fontSize: 40,
           color: Colors.black,
           fontFamily: "Billabong",
-          fontSize: 40,
           fontWeight: FontWeight.w400,
         ),
       ),
@@ -39,7 +40,7 @@ class InstagramAppBar extends StatelessWidget implements PreferredSizeWidget {
             color: Colors.black,
           ),
           tooltip: "Send",
-          iconSize: 30,
+          iconSize: 35,
           onPressed: () {},
         ),
       ],

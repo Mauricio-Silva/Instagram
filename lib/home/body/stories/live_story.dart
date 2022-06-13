@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/home/body/stories/story.dart';
 
-Stack storyLive = Stack(
+Stack liveStory = Stack(
   children: [
     const InstagramStory(
       userStoryImage: "assets/images/perfil2.jpeg",

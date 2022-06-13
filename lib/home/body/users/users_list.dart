@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/home/body/users/user.dart';
 
+//{ User 1 }------------------------------------------------------------------------------------------------------------------->
 InstagramUser user1 = InstagramUser(
   userProfileImage: const AssetImage("assets/images/perfil2.jpeg"),
   userProfileName: "Gandalf",
@@ -18,7 +19,7 @@ InstagramUser user1 = InstagramUser(
   userPhraseLine1: const [
     TextSpan(text: "Liked by "),
     TextSpan(
-      text: "Maurcicio@TL",
+      text: "maurcicio_cap_tl",
       style: TextStyle(fontWeight: FontWeight.bold),
     ),
     TextSpan(text: " and "),
@@ -28,16 +29,16 @@ InstagramUser user1 = InstagramUser(
     ),
   ],
   userPhraseLine2: const [
-    TextSpan(text: "Thanks "),
     TextSpan(
-      text: "Círdan",
+      text: "gandalf",
       style: TextStyle(fontWeight: FontWeight.bold),
     ),
-    TextSpan(text: " for give me the fire ring"),
+    TextSpan(text: " taking care of middle-earth, the gray wizzard"),
   ],
-  userHasTagLine: "#Círdan #FireRing #ElvenRing #TheThree",
+  userHasTagLine: "#GreyWizzard #Mithrandir #FireRing",
 );
 
+//{ User 2 }------------------------------------------------------------------------------------------------------------------->
 InstagramUser user2 = InstagramUser(
   userProfileImage: const AssetImage("assets/images/perfil1.png"),
   userProfileName: "Galadriel",
@@ -55,7 +56,7 @@ InstagramUser user2 = InstagramUser(
   userPhraseLine1: const [
     TextSpan(text: "Liked by "),
     TextSpan(
-      text: "Maurcicio@TL",
+      text: "maurcicio_cap_tl",
       style: TextStyle(fontWeight: FontWeight.bold),
     ),
     TextSpan(text: " and "),
@@ -65,16 +66,16 @@ InstagramUser user2 = InstagramUser(
     ),
   ],
   userPhraseLine2: const [
-    TextSpan(text: "Thanks "),
     TextSpan(
-      text: "Celebrimbor",
+      text: "galadriel",
       style: TextStyle(fontWeight: FontWeight.bold),
     ),
-    TextSpan(text: " for give me the water ring"),
+    TextSpan(text: " lady of ligth, lady of Caras Galadhon, Elven Queen"),
   ],
-  userHasTagLine: "#Celebrimbor #WaterRing #ElvenRing #TheThree",
+  userHasTagLine: "#LadyOfLigth #CarasGaladhon #ElvenQueen #WaterRing",
 );
 
+//{ User 3 }------------------------------------------------------------------------------------------------------------------->
 InstagramUser user3 = InstagramUser(
   userProfileImage: const AssetImage("assets/images/perfil3.jpg"),
   userProfileName: "Saruman",
@@ -92,22 +93,219 @@ InstagramUser user3 = InstagramUser(
   userPhraseLine1: const [
     TextSpan(text: "Liked by "),
     TextSpan(
-      text: "Maurcicio@TL",
-      style: TextStyle(fontWeight: FontWeight.bold),
-    ),
-    TextSpan(text: " and "),
-    TextSpan(
       text: "84 others",
       style: TextStyle(fontWeight: FontWeight.bold),
     ),
   ],
   userPhraseLine2: const [
-    TextSpan(text: "Thanks "),
     TextSpan(
-      text: "Rohirim",
+      text: "saruman",
       style: TextStyle(fontWeight: FontWeight.bold),
     ),
-    TextSpan(text: " for let me live in Orthanc, Isengard"),
+    TextSpan(text: " living in Orthanc, Isengard. White wizzard "),
   ],
   userHasTagLine: "#Rohirim #IstarisLeader #NoRing #WhiteWizzard",
+);
+
+//{ User 4 }------------------------------------------------------------------------------------------------------------------->
+InstagramUser user4 = InstagramUser(
+  userProfileImage: const AssetImage("assets/images/perfil4.jpg"),
+  userProfileName: "Elrond",
+  userProfileDesc: "High Elf, Rovendell",
+  userProfilePhotos: [
+    Image.asset(
+      "assets/images/perfil4.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/images/perfil4.jpg",
+      fit: BoxFit.cover,
+    ),
+  ],
+  userPhraseLine1: const [
+    TextSpan(text: "Liked by "),
+    TextSpan(
+      text: "maurcicio_cap_tl",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " and "),
+    TextSpan(
+      text: "2.689 others",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+  ],
+  userPhraseLine2: const [
+    TextSpan(
+      text: "elrond",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " lord of Rivendell, the wise and the counselor"),
+  ],
+  userHasTagLine: "#TheWise #Rivendell #Imladris #EnvenLord #WindRing",
+);
+
+//{ User 5 }------------------------------------------------------------------------------------------------------------------->
+InstagramUser user5 = InstagramUser(
+  userProfileImage: const AssetImage("assets/images/perfil5.jpg"),
+  userProfileName: "Aragorn",
+  userProfileDesc: "Dúnedain, Nomadic",
+  userProfilePhotos: [
+    Image.asset(
+      "assets/images/perfil5.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/images/perfil5.jpg",
+      fit: BoxFit.cover,
+    ),
+  ],
+  userPhraseLine1: const [
+    TextSpan(text: "Liked by "),
+    TextSpan(
+      text: "1.546 others",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+  ],
+  userPhraseLine2: const [
+    TextSpan(
+      text: "aragorn",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " Passolargo, Dúnedain, Guardian of the Middle-earth"),
+  ],
+  userHasTagLine:
+      "#Dunedain #Passolargo #Guardian #IsildorHeir #GondorThroneHeir",
+);
+
+//{ User 6 }------------------------------------------------------------------------------------------------------------------->
+InstagramUser user6 = InstagramUser(
+  userProfileImage: const AssetImage("assets/images/perfil6.jpeg"),
+  userProfileName: "Legolas",
+  userProfileDesc: "Elf, Mirkwood",
+  userProfilePhotos: [
+    Image.asset(
+      "assets/images/perfil6.jpeg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/images/perfil6.jpeg",
+      fit: BoxFit.cover,
+    ),
+  ],
+  userPhraseLine1: const [
+    TextSpan(text: "Liked by "),
+    TextSpan(
+      text: "2.208 others",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+  ],
+  userPhraseLine2: const [
+    TextSpan(
+      text: "aragorn",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " Folha verde, elfo silvestre, mirkwood prince"),
+  ],
+  userHasTagLine: "#VerdeFolha #Sindar #Mirkwood",
+);
+
+//{ User 7 }------------------------------------------------------------------------------------------------------------------->
+InstagramUser user7 = InstagramUser(
+  userProfileImage: const AssetImage("assets/images/perfil7.jpg"),
+  userProfileName: "Gimli",
+  userProfileDesc: "Dwarf, Erebor",
+  userProfilePhotos: [
+    Image.asset(
+      "assets/images/perfil7.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/images/perfil7.jpg",
+      fit: BoxFit.cover,
+    ),
+  ],
+  userPhraseLine1: const [
+    TextSpan(text: "Liked by "),
+    TextSpan(
+      text: "2.306 others",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+  ],
+  userPhraseLine2: const [
+    TextSpan(
+      text: "gimli",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " dwarf of the house of durin"),
+  ],
+  userHasTagLine: "#Dwarf #HouseOfDurin #Erebor",
+);
+
+//{ User 8 }------------------------------------------------------------------------------------------------------------------->
+InstagramUser user8 = InstagramUser(
+  userProfileImage: const AssetImage("assets/images/perfil8.jpg"),
+  userProfileName: "Théoden",
+  userProfileDesc: "Rohirrim, Rohan",
+  userProfilePhotos: [
+    Image.asset(
+      "assets/images/perfil8.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/images/perfil8.jpg",
+      fit: BoxFit.cover,
+    ),
+  ],
+  userPhraseLine1: const [
+    TextSpan(text: "Liked by "),
+    TextSpan(
+      text: "maurcicio_cap_tl",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " and "),
+    TextSpan(
+      text: "774 others",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+  ],
+  userPhraseLine2: const [
+    TextSpan(
+      text: "theoden",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " King of Rohan, Lord of Rohirrim"),
+  ],
+  userHasTagLine: "#Rohan #Rohirrim #Meduseld #HorseLordsLans",
+);
+
+//{ User 9 }------------------------------------------------------------------------------------------------------------------->
+InstagramUser user9 = InstagramUser(
+  userProfileImage: const AssetImage("assets/images/perfil9.jpg"),
+  userProfileName: "Bilbo",
+  userProfileDesc: "Hobbit, Shire",
+  userProfilePhotos: [
+    Image.asset(
+      "assets/images/perfil9.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/images/perfil9.jpg",
+      fit: BoxFit.cover,
+    ),
+  ],
+  userPhraseLine1: const [
+    TextSpan(text: "Liked by "),
+    TextSpan(
+      text: "3.468 others",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+  ],
+  userPhraseLine2: const [
+    TextSpan(
+      text: "bilbo",
+      style: TextStyle(fontWeight: FontWeight.bold),
+    ),
+    TextSpan(text: " a Hobbit of the shire, Bolseiro"),
+  ],
+  userHasTagLine: "#Hobbit #Shire #Bolseiro",
 );

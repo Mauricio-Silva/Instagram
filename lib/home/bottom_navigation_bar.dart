@@ -13,14 +13,14 @@ class BotNavBarState extends State<InstagramBottomNavigationBar> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      // switch (_selectedIndex) {
-      //   case 1:
-      //     Navigator.pushNamed(context, "/settings");
-      //     break;
-      //   case 2:
-      //     Navigator.pushNamed(context, "/account");
-      //     break;
-      // }
+      switch (_selectedIndex) {
+        case 1:
+          Navigator.pushNamed(context, "/search");
+          break;
+        case 2:
+          Navigator.pushNamed(context, "/account");
+          break;
+      }
     });
   }
 
@@ -28,7 +28,7 @@ class BotNavBarState extends State<InstagramBottomNavigationBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      iconSize: 30,
+      iconSize: 35,
       backgroundColor: Colors.white,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
