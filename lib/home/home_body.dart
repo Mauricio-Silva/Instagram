@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:instagram/home/body/stories/stories.dart';
 import 'package:instagram/home/body/users/users_list.dart';
 
-class InstagramBody extends StatelessWidget {
-  const InstagramBody({Key? key}) : super(key: key);
+
+class HomeBody extends StatelessWidget {
+  const HomeBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,3 +24,4 @@ class InstagramBody extends StatelessWidget {
     );
   }
 }
+

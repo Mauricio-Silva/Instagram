@@ -40,16 +40,16 @@ InstagramUser user1 = InstagramUser(
 
 //{ User 2 }------------------------------------------------------------------------------------------------------------------->
 InstagramUser user2 = InstagramUser(
-  userProfileImage: const AssetImage("assets/images/perfil1.png"),
+  userProfileImage: const AssetImage("assets/images/perfil1.jpg"),
   userProfileName: "Galadriel",
   userProfileDesc: "High Elf, Lothlórien",
   userProfilePhotos: [
     Image.asset(
-      "assets/images/perfil1.png",
+      "assets/images/perfil1.jpg",
       fit: BoxFit.cover,
     ),
     Image.asset(
-      "assets/images/perfil1.png",
+      "assets/images/perfil1.jpg",
       fit: BoxFit.cover,
     ),
   ],

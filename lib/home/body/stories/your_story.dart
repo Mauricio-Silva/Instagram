@@ -10,7 +10,7 @@ Stack yourStory = Stack(
             padding: EdgeInsets.all(5.0),
             child: CircleAvatar(
               radius: 40,
-              backgroundImage: AssetImage("assets/images/perfil4.jpg"),
+              backgroundImage: AssetImage("assets/images/perfil0.jpg"),
             ),
           ),
           SizedBox(

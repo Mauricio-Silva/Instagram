@@ -7,7 +7,7 @@ List<Widget> stories = [
   yourStory,
   liveStory,
   const InstagramStory(
-    userStoryImage: "assets/images/perfil1.png",
+    userStoryImage: "assets/images/perfil1.jpg",
     userStoryName: "Galadriel",
   ),
   const InstagramStory(
@@ -23,7 +23,7 @@ List<Widget> stories = [
     userStoryName: "Aragorn",
   ),
   const InstagramStory(
-    userStoryImage: "assets/images/perfil6.jpeg",
+    userStoryImage: "assets/images/perfil6.jpg",
     userStoryName: "Legolas",
   ),
   const InstagramStory(

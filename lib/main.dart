@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/followers.dart';
-import 'package:instagram/home.dart';
-import 'package:instagram/message.dart';
-import 'package:instagram/profile.dart';
-import 'package:instagram/search.dart';
+import 'package:instagram/wrapper.dart';
 
 void main() {
   runApp(const Instagram());
@@ -19,11 +15,11 @@ class Instagram extends StatelessWidget {
       theme: ThemeData.light(),
       initialRoute: "/",
       routes: {
-        "/": (context) => const Home(),
-        "/search": (context) => const Search(),
-        "/message": (context) => const Message(),
-        "/followers": (context) => const Followers(),
-        "/profile": (context) => const Profile(),
+        "/": (context) => const Wrapper(),
+        // "/search": (context) => const Search(),
+        // "/message": (context) => const Message(),
+        // "/followers": (context) => const Followers(),
+        // "/profile": (context) => const Profile(),
       },
     );
   }
