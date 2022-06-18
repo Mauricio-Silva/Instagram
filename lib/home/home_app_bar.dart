@@ -16,10 +16,9 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               Icons.camera_alt_outlined,
               color: Colors.black,
             ),
+            tooltip: "Camera",
             iconSize: 35,
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
+            onPressed: () {},
           );
         },
       ),

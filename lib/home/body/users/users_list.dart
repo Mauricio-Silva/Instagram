@@ -179,16 +179,16 @@ InstagramUser user5 = InstagramUser(
 
 //{ User 6 }------------------------------------------------------------------------------------------------------------------->
 InstagramUser user6 = InstagramUser(
-  userProfileImage: const AssetImage("assets/images/perfil6.jpeg"),
+  userProfileImage: const AssetImage("assets/images/perfil6.jpg"),
   userProfileName: "Legolas",
   userProfileDesc: "Elf, Mirkwood",
   userProfilePhotos: [
     Image.asset(
-      "assets/images/perfil6.jpeg",
+      "assets/images/perfil6.jpg",
       fit: BoxFit.cover,
     ),
     Image.asset(
-      "assets/images/perfil6.jpeg",
+      "assets/images/perfil6.jpg",
       fit: BoxFit.cover,
     ),
   ],

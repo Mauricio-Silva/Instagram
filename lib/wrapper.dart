@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/add_Content/add_content.dart';
 import 'package:instagram/followers/followers.dart';
 import 'package:instagram/home/home.dart';
+import 'package:instagram/profile/profile.dart';
 import 'package:instagram/search/search.dart';
 
 class Wrapper extends StatefulWidget {
@@ -17,14 +19,19 @@ class _WrapperState extends State<Wrapper> {
   List<Widget> navPages = [
     const Home(),
     const Search(),
+    const InstagramAddContent(),
     const Followers(),
+    const Profile(),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      controller.animateToPage(index,
-          duration: kThemeAnimationDuration, curve: Curves.easeInOut);
+      controller.animateToPage(
+        index,
+        duration: kThemeAnimationDuration,
+        curve: Curves.easeInOut,
+      );
     });
   }
 
@@ -69,7 +76,7 @@ class _WrapperState extends State<Wrapper> {
               Icons.favorite_border,
             ),
             label: "",
-            tooltip: "Favorite",
+            tooltip: "Followers",
           ),
           BottomNavigationBarItem(
             icon: Icon(

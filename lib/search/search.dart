@@ -12,17 +12,15 @@ class Search extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(15, 7, 15, 7),
             child: Material(
-              color: const Color.fromARGB(255, 201, 203, 212),
+              color: const Color.fromARGB(255, 232, 236, 238),
               borderRadius: const BorderRadius.all(Radius.circular(10)),
               child: TextField(
+                style: const TextStyle(fontSize: 18),
                 cursorColor: Colors.grey[800],
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.search),
+                  border: InputBorder.none,
                   hintText: "Search",
-                  fillColor: Colors.red,
-                  iconColor: Colors.yellow,
-                  focusColor: Colors.green,
-                  hoverColor: Colors.purple,
                 ),
               ),
             ),
